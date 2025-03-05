@@ -1,6 +1,7 @@
 import random
 integrantes=["Rebeca","Galilea","Addi","Hector","Juan",
              "Jenny","Rosalinda","Ryan","Duran","Alberto","Tania","Patricia"]
+
 equipo_1=[]
 equipo_2=[]
 equipo_3=[]
@@ -13,6 +14,14 @@ while len(integrantes)>=2:
     integrantes.remove(persona1)
     persona2=random.choice(integrantes)
     integrantes.remove(persona2)
+
+i=0
+while i >=6:
+    if persona1 != persona2:
+        equipo_1,append
+        equipo_2.append(persona1)
+        equipo_2.append(persona2)
+
 
 
 
