@@ -37,12 +37,12 @@ while len(integrantes) >= 2:
     persona2 = random.choice(integrantes)
     integrantes.remove(persona2)
 
-    equipo_aleatorio = random.choice(todos_los_equipos)
 
-    if len(equipo_aleatorio)<2:
-        equipo_aleatorio.append(persona1)
-        equipo_aleatorio.append(persona2)
-
+    for equipos in todos_los_equipos:
+        if len(equipos)<2:
+            equipos.append(persona1)
+            equipos.append(persona2)
+            break
 
 # Mostrar los equipos generados
 print(f"Equipo 1: {equipo_1}.")
