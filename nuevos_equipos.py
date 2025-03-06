@@ -14,10 +14,8 @@ while len(integrantes)>=2:
     persona2=random.choice(integrantes)
     integrantes.remove(persona2)
 
-
-
-print(f"Equipo 1: {equipo_1}")
-print(f"Equipo 2: {equipo_2}")
+print(f"Equipo 1: {equipo_1}.")
+print(f"Equipo 2: {equipo_2}.")
 print(f"Equipo 3: {equipo_3}")
 print(f"Equipo 4: {equipo_4}")
 print(f"Equipo 5: {equipo_5}")
