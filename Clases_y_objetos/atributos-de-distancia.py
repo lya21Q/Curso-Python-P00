@@ -15,6 +15,7 @@ class   Profesor:
         self.temas_dominados=[]
 
     def temas_dominados(self,tema:str,no_tema:int):
+        self
 
 
 
