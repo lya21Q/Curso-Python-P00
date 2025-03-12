@@ -13,6 +13,7 @@ class   Estudiante:
 class   Profesor:
     def __init__(self,nombre,temas_dominados:list[str]):
         self.nombre=nombre
+        self.temas_dominados=temas_dominados.copy()
         self.temas_dominados=temas_dominados
     def dominar_temas(self,tema:str)->None:
         self.temas_dominados.append(tema)
@@ -30,9 +31,10 @@ class Empleado:
     def __init__(self,nombre,sueldo):
         self.nombre=nombre
         self.sueldo=sueldo
-        self.id=Empleado.no_id
+        self.id_Empleado=Empleado.no_id
         Empleado.no_id += 1
     def aumentar_sueldo(self,porcentaje:float)->None:
+        
         pass
     def __str__(self)-> str:
         Empleado(id={self.id},nombre={self.nombre})
