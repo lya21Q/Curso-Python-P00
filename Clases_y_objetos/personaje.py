@@ -38,4 +38,3 @@ if __name__ =="__main__":
     personaje1.moverse("a")
     personaje1.posicion_actual()
 
-    while personaje1.moverse != "s":
