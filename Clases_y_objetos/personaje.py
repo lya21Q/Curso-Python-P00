@@ -14,13 +14,13 @@ class Personaje:
 
     def moverse(self, ordenes:str)->None:
         for palabra in ordenes:
-            if palabra == "A" or "a":
+            if palabra == "A" or palabra== "a":
                 self.Y+=1
-            elif palabra == "R" or "r":
+            elif palabra == "R" or palabra== "r":
                 self.Y-=1
-            elif palabra == "D" or "d":
+            elif palabra == "D" or palabra== "d":
                 self.X+=1
-            elif palabra == "I" or "i":
+            elif palabra == "I" or palabra== "i":
                 self.X-=1
 
 
@@ -29,12 +29,18 @@ class Personaje:
 
 
     def __str__(self):
-        return f"Personaje(id: {self.id_personaje}"
+        return f"Personaje(id: {self.id_personaje}, (X,Y):({self.X},{self.Y}))"
 
     """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ =="__main__":
     #Personaje=()
     personaje1=Personaje()
-    personaje1.moverse("a")
-    personaje1.posicion_actual()
-
+    cont=0
+    while cont < 10:
+        ordenes=input("Ingresa las ordenes de movimiento: ")
+        if ordenes=="S" or ordenes == "s":
+            print("Fin del programa.")
+            break
+        personaje1.moverse(ordenes)
+        personaje1.posicion_actual()
+        cont+=1
