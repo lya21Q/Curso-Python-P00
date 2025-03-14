@@ -22,7 +22,9 @@ class Personaje:
                 self.X+=1
             elif palabra == "I" or palabra== "i":
                 self.X-=1
-
+            else:
+                print("no valido, intentelo de nuevo")
+                break
 
     def posicion_actual(self)->None:
         print(f"Posición actual de X:{self.X} y la posición actual de Y es: {self.Y} ")
