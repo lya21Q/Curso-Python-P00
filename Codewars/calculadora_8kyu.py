@@ -17,20 +17,19 @@ calculator(1, 2, '$') # result will be "unknown value"
 primer_argumento=int(input("Ingrese el primer argumento: "))
 segundo_argumento=int(input("Ingrese eñ segundo argumento: "))
 tercer_argumento=input("Ingrese el simbolo de la operación que se realizara: ")
-simbolo=["+","-","*","/"]
 
-def carculator(primer_argumento,segundo_argumento):
-    while tercer_argumento != simbolo:
-        if tercer_argumento == "+":
-            calcular= primer_argumento + segundo_argumento
-        elif tercer_argumento == "*":
-            calcular= primer_argumento * segundo_argumento
-        elif tercer_argumento == "/":
-            calcular=primer_argumento / segundo_argumento
-        else:
-            print("Valor desconocido.")
-            break
-        return calcular
 
-calcular=carculator(primer_argumento,segundo_argumento)
-print(f"El resultado es {calcular}")
+def calculator(primer_argumento, segundo_argumento, tercer_argumento):
+    if tercer_argumento == "+":
+        return primer_argumento + segundo_argumento
+    elif tercer_argumento == "-":
+        return primer_argumento - segundo_argumento
+    elif tercer_argumento == "*":
+        return primer_argumento * segundo_argumento
+    elif tercer_argumento == "/":
+        return primer_argumento / segundo_argumento
+    else:
+        return "unknown value"
+
+calcular=calculator(primer_argumento,segundo_argumento,tercer_argumento)
+print(f"El resultado es: {calcular}")
