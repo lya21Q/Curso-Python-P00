@@ -29,7 +29,7 @@ def calculator(primer_argumento, segundo_argumento, tercer_argumento):
     elif tercer_argumento == "/":
         return primer_argumento / segundo_argumento
     else:
-        return "unknown value"
+        return "opcion inválida"
 
 calcular=calculator(primer_argumento,segundo_argumento,tercer_argumento)
 print(f"El resultado es: {calcular}")
