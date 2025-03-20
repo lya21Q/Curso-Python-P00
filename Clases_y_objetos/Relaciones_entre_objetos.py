@@ -39,13 +39,22 @@ class Empresa:
                 print(f"El empleado {empleado} no forma parte de {self.nombre}.")
 
 if __name__ == '__main__':
+    juan=Empleado("Juan Bautista", 206)
+    print(juan)
+    juan.nombre="Juan Bautista"
+    print(juan)
+    print(juan.nombre)
     empleado1 = Empleado("Jose Ramirez", 250)
     empleado2 = Empleado("Maria Ramirez", 250)
     print(empleado1)
     print(empleado2)
+    empleado3 = Empleado("Juan", 203)
+
+
 
     Unsij=Empresa("UNSIJ",empleado1,empleado2)
     Unsij.agregar_empleados(empleado1,empleado2)
     print(Unsij)
 
+    bimbo=Empresa("Bimbo",empleado1,empleado2)
 
