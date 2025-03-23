@@ -16,7 +16,7 @@ class Personaje:
         self.id_personaje=Personaje.no_id
         Personaje.no_id+=1
 
-    """Funcion que mueve al personaje en el plano cartesiano según las órdenes dadas"""
+    """Funcion que mueve al personaje en la ventana según las órdenes dadas"""
     def moverse(self, ordenes:str)->None:
         for palabra in ordenes:
             if palabra == "A" or palabra== "a":
