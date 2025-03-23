@@ -1,17 +1,22 @@
+"""
+Clase que representa un personaje que se puede mover en un plano cartesiano.
+"""
+
 class Personaje:
-    #Clase que representa a un personaje.
-    #SUS ATRIBUTOS SON, X y Y.
+    """Atributos de Clase"""
     contador_id:int=1
     no_id = 1
+    """Constructor que inicializa un personaje"""
     def __init__(self):
-        #Atributos de instancia
+        """Atributos de instancia"""
         self.X=0
         self.Y=0
 
-        #Atributo independiente
+        """Atributo independiente"""
         self.id_personaje=Personaje.no_id
         Personaje.no_id+=1
 
+    """Funcion que mueve al personaje en el plano cartesiano según las órdenes dadas"""
     def moverse(self, ordenes:str)->None:
         for palabra in ordenes:
             if palabra == "A" or palabra== "a":
@@ -27,15 +32,15 @@ class Personaje:
                 break
 
     def posicion_actual(self)->None:
-        print(f"Posición actual de X:{self.X} y la posición actual de Y es: {self.Y} ")
+        print(f"Posición actual de X:{self.X} y la posición actual de Y es: {self.Y} ")#Imprime la posición actual del personaje.
 
 
     def __str__(self):
-        return f"Personaje(id: {self.id_personaje}, (X,Y):({self.X},{self.Y}))"
+        return f"Personaje(id: {self.id_personaje}, (X,Y):({self.X},{self.Y}))"#Retorna una cadena que describe  al personaje con su id y posición actual.
 
     """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ =="__main__":
-    #Personaje=()
+    """Permite al usuario mover un personaje, dependeindo de las instrucciones que de."""
     personaje1=Personaje()
     cont=0
     while cont < 10:
