@@ -1,5 +1,5 @@
 """
-Clase que representa un personaje que se puede mover en un plano cartesiano.
+Clase que representa los movimientos de un personaje de videojuegos en una ventana .
 """
 
 class Personaje:
