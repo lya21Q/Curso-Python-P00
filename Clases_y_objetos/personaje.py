@@ -1,5 +1,5 @@
 """
-Clase que representa los movimientos de un personaje de videojuegos en una ventana .
+Clase que simula los movimientos de un personaje de videojuegos en una ventana .
 """
 
 class Personaje:
