@@ -1,18 +1,34 @@
-class Scoreboard():
-    puntuacion=1
+class Scoreboard:
+    marcador=1
     def __init__(self,points:int=0,text_color:tuple[int]=(0,0,0),font:str="kimono"):
         self.points=points
-        self.text_color=tuple[int,int,int]
+        self.text_color=tuple[int]
         self.font=font
+    marcador += 1
 
-    def constructor(self):
-        pass
-    def metodos_de_acceso(self):
+    @property
+    def points(self)->int:
+        return self._points
 
-    def draw(self):
+    @property
+    def text_color(self)->tuple[int]:
+        return self.text_color
+    @property
+    def font(self)->str:
+        return self.font
+    @property
+    def size(self)->float:
+        return self.size
+
+    def draw(self)->None:
         pass
+
     def _str_int(self):
         pass
+
+    def __str__(self) -> str:
+        return f"(Scoreboard {self.points}, color {self.text_color, }, la fuente del texto{self.font})"
+
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ == "__main__":
