@@ -1,25 +1,24 @@
 class Scoreboard:
-    marcador=1
-    def __init__(self,points:int=0,text_color:tuple[int]=(0,0,0),font:str="kimono") -> None:
+    def __init__(self,points:int=0,text_color:tuple[int]=(0,0,0),font:str="kimono",size:float=48) -> None:
         self._points=points
-        self._text_color=tuple[int]
+        self._text_color=text_color
         self._font=font
-    marcador += 1
+        self._size=size
 
     @property
     def points(self)->int:
         return self._points
 
     @property
-    def text_color(self)->tuple[int]:
+    def text_color(self)->tuple[int,int,int]:
         return self.text_color
 
     @property
     def font(self)->str:
-        return self.font
+        return self._font
     @property
     def size(self)->float:
-        return self.size
+        return self._size
 
     def draw(self)->None:
         pass
@@ -28,7 +27,7 @@ class Scoreboard:
         pass
 
     def __str__(self) -> str:
-        return f"(Scoreboard {self.points}, color {self.text_color, }, la fuente del texto{self.font})"
+        return f"(Scoreboard (points={self._points}, text_color {self._text_color, },font= {self._font}, size={self._size})"
 
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
@@ -43,7 +42,7 @@ if __name__ == "__main__":
 
     print()
     print("Se crea otro objeto con (points, font y text_color) como argumentos por nombre:")
-    marcador2 = Scoreboard(10, font="Arial", text_color=(127, 127, 127))
+    marcador2 = Scoreboard(points=10, font="Arial", text_color=(127, 127, 127))
     print(f"marcador2 = {marcador2}")
 
     print()
