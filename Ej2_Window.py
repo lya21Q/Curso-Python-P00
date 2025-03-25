@@ -1,6 +1,8 @@
+from pyphisher import update
+
 from Clases_y_objetos.Ej2_Scoreboard import Scoreboard
 class Window:
-    def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard()):
+    def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard())->None:
         self._text=text
         self._width=width
         self._height=height
@@ -8,14 +10,14 @@ class Window:
 
     @property
     def draw_scoreboard(self)->None:
-        return self.draw_scoreboard
+        return self._scoreboard
 
     @property
-    def update_score(self,_points:int)->None:
-        return self.update_score
+    def update_score(self,points:int)->None:
+        return self.
 
     def __str__(self)->str:
-        return f"(Window(title=Buscaminas,width={self._width},heigth={self._height},scoreboard(ponts={self.points},text_color={self,tex_color})"
+        return f"(Window(title=Buscaminas,width={self._width},heigth={self._height},scoreboard(points={self._scoreboard.points},text_color={self._scoreboard.text_color})"
 
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """

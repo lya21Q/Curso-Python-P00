@@ -1,5 +1,5 @@
 class Scoreboard:
-    def __init__(self,points:int=0,text_color:tuple[int]=(0,0,0),font:str="kimono",size:float=48) -> None:
+    def __init__(self,points:int=0,text_color:tuple[int,int,int]=(0,0,0),font:str= "kimono",size:float=48) -> None:
         self._points=points
         self._text_color=text_color
         self._font=font
@@ -11,7 +11,7 @@ class Scoreboard:
 
     @property
     def text_color(self)->tuple[int,int,int]:
-        return self.text_color
+        return self._text_color
 
     @property
     def font(self)->str:
