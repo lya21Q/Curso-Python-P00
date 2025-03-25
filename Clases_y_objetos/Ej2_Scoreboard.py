@@ -21,10 +21,7 @@ class Scoreboard:
         return self._size
 
     def draw(self)->None:
-        pass
-
-    def _str_int(self):
-        pass
+        print(f"score={self.points}")
 
     def __str__(self) -> str:
         return f"(Scoreboard (points={self._points}, text_color {self._text_color, },font= {self._font}, size={self._size})"
