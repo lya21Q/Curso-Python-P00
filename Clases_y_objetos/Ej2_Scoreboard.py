@@ -24,7 +24,7 @@ class Scoreboard:
         print(f"score={self.points}")
 
     def __str__(self) -> str:
-        return f"(Scoreboard (points={self._points}, text_color {self._text_color, },font= {self._font}, size={self._size})"
+        return f"(Scoreboard (points={self._points}, text_color {self._text_color},font= {self._font}, size={self._size})"
 
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
