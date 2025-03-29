@@ -1,4 +1,5 @@
-from Clases_y_objetos.Ej2_Scoreboard import Scoreboard
+
+from Ej2_Scoreboard import Scoreboard
 class Window:
     def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard())->None:
         self._text=text
@@ -6,16 +7,16 @@ class Window:
         self._height=height
         self._scoreboard=scoreboard
 
-    @property
-    def draw_scoreboard(self)->None:
-        print(Scoreboard.points)
 
-    @property
+    def draw_scoreboard(self)->None:
+        self._scoreboard.draw()
+
     def update_score(self,points:int)->None:
-        print(f"")
+        self._scoreboard._points = points
+        self._scoreboard.draw()
 
     def __str__(self)->str:
-        return f"(Window(title=Buscaminas{buscaminas},width={self._width},heigth={self._height},scoreboard(points={self._scoreboard.points},text_color={self._scoreboard.text_color})"
+        return f"(Window(title= {self._text},width={self._width},heigth={self._height},{self._scoreboard})"
 
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
