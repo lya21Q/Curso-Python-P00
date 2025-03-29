@@ -1,100 +1,41 @@
-"""
-Nombre: Alberto Martínez Barbosa.
-Fecha:
-Descripción:
-Primer ejemplo de uso de una clase y un objeto. En este caso, para representar a una persona.
-
-Una clase es una plantilla o un plano para crear objetos.
-Define un conjunto de atributos (datos) y métodos (funciones) que caracterizan a los objetos que se
-crearán a partir de ella. Piensa en una clase como un molde que describe cómo serán los objetos.
-
-* Atributos: Son variables que almacenan datos asociados a la clase.
-* Métodos: Son funciones que definen el comportamiento de la clase.
-
-"""
-
-
-# Para crear una clase, se utiliza la palabra reservada "class", seguido del nombre (letra inicial en
-# mayúsculas).
 class Persona:
-    """
-    Clase que representa a una persona.
-    Sus atributos son: nombre, edad, altura y peso.
-    Sus métodos son: comer(), dormir() y caminar().
-    """
-    def __init__(self,nombre:str, edad: int, altura: float, peso: float):
-        """
-        Constructor de la clase Persona.
-        :param nombre: Nombre completo de la persona.
-        :param edad: Edad de la persona.
-        :param altura: Altura (m) de la persona.
-        :param peso: Peso (Kg) de la persona.
-        """
+    def __init__(self,nombre:str,edad:int,altura:float,peso:float):
         self.nombre = nombre
         self.edad = edad
         self.altura = altura
         self.peso = peso
-
-
-    def comer(self) -> None:
-        """
-        Función que indica que la persona está comiendo.
-        """
-        print(f"{self.nombre} está comiendo, seguramente va a subir de sus {self.peso:.2f} Kgs.")
-
-
-    def dormir(self) -> None:
-        """
-        Función que indica que la persona está durmiendo.
-        """
-        print(f"{self.nombre} está durmiendo, por lo que va a ser un día mayor de sus {self.edad} años.")
-
-
     def caminar(self) -> None:
-        """
-        Función que indica que la persona está caminando.
-        """
-        print(f"{self.nombre} está caminando con sus {self.altura:.2f} metros de altura.")
+        print("Estoy caminando")
+    def comer(self) -> None:
+        print("Estoy camiendo")
+    def jugar(self) -> None:
+        print("Estoy jugando")
+    def dormir(self) -> None:
+        print("Estoy durmiendo")
 
 
+if __name__=='__main__':
+    amiga=Persona("Jennifer Marlene Gutierrez Beteta",19,1.52,46)
+print(amiga.nombre)
+print(amiga.edad)
+print(amiga.altura)
+print(amiga.peso)
 
-""" %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
-if __name__ == "__main__":
-    # Se instancía (crea) un objeto de la clase Persona.
-    # Nota: Crear un punto de ruptura en la condicional "if __name__ == "__main__"
-    # y ejecutar en el modo depuración, probando con step over y step into.
-    alberto = Persona("Alberto Martínez", 31, 1.66, 67.2)
+def caminar(self)->None:
+    print(f"{self.nombre}está caminando para bajar de sus {self.peso}kgs")
 
-    # Se imprimen los atributos del objeto.
-    print("  -- Se crea un objeto de la clase Persona y se imprimen sus atributos:")
-    print(f"Nombre: {alberto.nombre}. Edad: {alberto.edad}. "
-          f"Altura: {alberto.altura}. Peso: {alberto.peso}. ")
+def comer(self)->None:
+    print(f"{self.nombre}está comiendo una maruchan de pollo picante.")
 
-    # Ahora se utilizan los métodos del objeto.
-    print()
-    print("  -- Se utilizan los métodos del objeto.")
-    alberto.comer()
-    alberto.dormir()
-    alberto.caminar()
+def jugar(self) -> None:
+    print(f"{self.nombre}está jugando .")
 
-    # Se crea otro objeto de la clase Persona y se imprimen sus datos.
-    cristiano = Persona("Cristiano Ronaldo", 40, 1.85, 83)
+def dormir(self)->None:
+    print(f"{self.nombre}está durmiendo.")
 
-    print()
-    print("  -- Nuevo objeto de la clase Persona:")
-    print(f"Nombre: {cristiano.nombre}. Edad: {cristiano.edad}. "
-          f"Altura: {cristiano.altura}. Peso: {cristiano.peso}. ")
-
-
-    # Es posible actualizar la información de los atributos. En este caso, se modifican los datos
-    # del primer objeto.
-    print()
-    print("  -- Actualización de los datos del objeto.")
-    print("Datos previos:")
-    print(f"Nombre: {alberto.nombre}. Peso: {alberto.peso}. ")
-
-    alberto.nombre = "Alberto Martínez Barbosa"
-    alberto.peso = 67.3
-
-    print("Datos modificados:")
-    print(f"Nombre: {alberto.nombre}. Peso: {alberto.peso}. ")
+amiga.peso=50
+amiga.nombre="Rebeca"
+amiga.edad=19
+amiga.altura=1.65
+amiga.caminar()
+print(amiga.nombre)
