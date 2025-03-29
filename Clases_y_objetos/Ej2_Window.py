@@ -1,23 +1,26 @@
 
 from Ej2_Scoreboard import Scoreboard
 class Window:
+    #Métodos:
+    #Inicializa la instancia de clase winddow don: texto, alto,ancho y marcador de la puntuación.
     def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard())->None:
-        self._text=text
-        self._width=width
-        self._height=height
-        self._scoreboard=scoreboard
+        #Atributos
+        self._text=text#Título de la ventana(protegido).
+        self._width=width#Ancho de la ventana (protegido).
+        self._height=height#Alto de la ventana (protegido).
+        self._scoreboard=scoreboard#Instancia de Scoreboard asociada a la ventana
 
 
-    def draw_scoreboard(self)->None:
+    def draw_scoreboard(self)->None:#Llama al método draw para mostrarlo en pantalla.
         self._scoreboard.draw()
 
-    def update_score(self,points:int)->None:
+    def update_score(self,points:int)->None:#Actualiza la puntuación del marcador y lo dibuja nuévamente.
         self._scoreboard._points = points
         self._scoreboard.draw()
 
     def __str__(self)->str:
         return f"(Window(title= {self._text},width={self._width},heigth={self._height},{self._scoreboard})"
-
+    #Representación en cadena que muestra, el título,dimdensiones y marcador.
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ == "__main__":
