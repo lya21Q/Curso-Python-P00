@@ -1,23 +1,32 @@
 class Scoreboard:
+    """
+    Atributos:
+    - points (int): Número de puntos iniciales en el marcador.
+    - text_color (tuple[int, int, int]): .Formato del texto
+    - font (str): Fuente utilizada para el marcador. Predeterminado es "kimono".
+    - size (float): Tamaño del marcador.
+    """
+    """Métodos"""
     def __init__(self,points:int=0,text_color:tuple[int,int,int]=(0,0,0),font:str= "kimono",size:float=48) -> None:
+        """Constructor de la clase, inicializa el marcador con los valores predeterminadas."""
         self._points=points
         self._text_color=text_color
         self._font=font
         self._size=size
 
     @property
-    def points(self)->int:
+    def points(self)->int:#Propiedad para obtener el valor actual de los puntos
         return self._points
 
     @property
-    def text_color(self)->tuple[int,int,int]:
+    def text_color(self)->tuple[int,int,int]:#Propiedad para obtener el color actual del texto.
         return self._text_color
 
     @property
-    def font(self)->str:
+    def font(self)->str:#Propiedad para obtener la fuente actual del marcador.
         return self._font
     @property
-    def size(self)->float:
+    def size(self)->float:#Propiedad paara obtener el tamaño de actual del marcador.
         return self._size
 
     def draw(self)->None:
