@@ -1,14 +1,13 @@
-edad = 0
-def people_with_age_drink(edad):
-    while edad  > 40:
-        if edad <= 14:
-            print("drink toddy")
-        elif edad > 14 and edad <= 18:
-            print("drink coke")
-        elif edad > 18 and edad <= 21:
-            print("drink beer")
-        elif edad > 21:
-            print("drink whisky")
+age= int(input("Ingrese tu edad: "))
+def people_with_age_drink(age):
+    if age <= 13:
+        return 'drink toddy'
+    if age > 13 and age <= 17:
+        return 'drink coke'
+    if age > 17 and age <= 20:
+        return 'drink beer'
+    if age > 20:
+        return 'drink whisky'
+print(f"{people_with_age_drink(age)}")
 
-edad_1= int(input("Ingrese tu edad: "))
-people_with_age_drink(edad)
+
