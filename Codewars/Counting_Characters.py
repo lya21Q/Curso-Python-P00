@@ -11,5 +11,5 @@ def count_char_occurrences(strng, char):
     for letra in strng:
         if letra == char:
             cont+=1
-    print(f"{strng},{char},{cont}")
-count_char_occurrences(strng,char)
+    return cont
+print(count_char_occurrences(strng,char))
