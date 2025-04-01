@@ -1,8 +1,6 @@
 """
-Define un método llamado countCharOccurrenceso
-count_char_occurrencesque acepta una cadena y un carácter como
+Define un méodo llamado countCharOccurrenceso, count_char_occurrencesque acepta una cadena y un carácter como
 entradas y devuelve la cantidad de veces que el carácter aparece en la cadena como un int.
-
 """
 strng=input("Ingrese una palabra:")
 char=input("Ingrese un caracter:")

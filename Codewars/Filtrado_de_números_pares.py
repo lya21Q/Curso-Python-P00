@@ -1,3 +1,4 @@
+
 def kata_13_december(lst):
     i=0
     while i < len(lst):
