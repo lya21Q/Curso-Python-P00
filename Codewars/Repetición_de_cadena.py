@@ -9,8 +9,10 @@ Ejemplos (entrada -> salida)
 """
 
 def repeat_str(repeat:int, string:str)->str:
-    #parametros:repeat(int):Representa el numero de veces que se repetira la palabra.
+    #Parámetros:repeat(int):Representa el numero de veces que se repetira la palabra.
     #string(str):Cadena que se repetira.
+    #Retorna: La cadena repetida n veces.
+    # Si el número es 0, retorna una cadena vacía.
     if repeat > 0:# Mientras el numero sea mayor que cero
         return repeat * string#Multiplica la cadena con el número ingresado.
     elif repeat == 0:#Si es cero
