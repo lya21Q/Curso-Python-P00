@@ -1,16 +1,23 @@
 """
+Nombre : Rosalinda Aquino Pérez
+Fecha: 01/04/2025
+Instrucciones:
 Completa la función que devuelve el día de la semana según el número de entrada:
-1   Devoluciones"Sunday"
-2   Devoluciones"Monday"
-3   Devoluciones"Tuesday"
-4   Devoluciones"Wednesday"
-5   Devoluciones"Thursday"
-6   Devoluciones"Friday"
-7   Devoluciones"Saturday"
-De lo contrario regresa"Wrong, please enter a number between 1 and 7"
+1 - Devoluciones"Sunday"
+2 - Devoluciones"Monday"
+3 - Devoluciones"Tuesday"
+4 - Devoluciones"Wednesday"
+5 - Devoluciones"Thursday"
+6 - Devoluciones"Friday"
+7 - Devoluciones"Saturday"
+De lo contrario regresa: "Wrong, please enter a number between 1 and 7"
 """
-num=int(input("Ingresa un número:"))
-def whatday(num):
+
+"""Función que devuelve un dia correspondiendo a un número"""
+def whatday(num:int) ->str:
+#Parámetros:num (int), Un número entero del 1 al 7 que representa un día de la semana.
+#Retorna :El nombre correspondiente al número ingresado.
+# Si el número no se encuentrá en el rango imprime un mensaje de error.
     if num == 1:
         return "Sunday"
     elif num == 2:
@@ -27,4 +34,7 @@ def whatday(num):
         return "Saturday"
     else:
         return "Wrong, please enter a number between 1 and 7"
-print(whatday(num))
+
+if __name__ == "__main__":
+    num = int(input("Ingresa un número:"))
+    print(whatday(num))
