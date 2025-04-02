@@ -13,7 +13,7 @@ Completa la función que devuelve el día de la semana según el número de entr
 De lo contrario regresa: "Wrong, please enter a number between 1 and 7"
 """
 
-"""Función que devuelve un dia correspondiendo a un número"""
+#Función que devuelve un dia de la semana correspondiendo a un número
 def whatday(num:int) ->str:
 #Parámetros:num (int), Un número entero del 1 al 7 que representa un día de la semana.
 #Retorna :El nombre correspondiente al número ingresado.
