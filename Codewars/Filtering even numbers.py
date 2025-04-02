@@ -3,7 +3,7 @@ Nombre:Rosalinda Aquino Pérez
 Fecha:01/04/2025
 Instrucciones:
 supone que el méodo elimina los números pares de la lista y devuelve una lista que contiene los números impares.
-Sin embargo, hay un error en el método que necesita ser resuelto.
+Sin embargo, hay un error en el méodo que necesita ser resuelto.
 """
 
 def kata_13_december(lst:list[int]):
