@@ -3,7 +3,7 @@ class Jugador:
         self._nombre=nombre
         self._numero=numero
         self._goles=goles
-    def anotar_goles(self):
+    def anotar_goles(self,no_goles: int):
         pass
     def __str__(self):
         pass
@@ -12,11 +12,11 @@ class Equipo:
     def __init__(self,nombre:str,*jugadores:tuple[Jugador]):
         self._nombre=nombre
         self._jugadores=jugadores
-    def agregar_jugadores(self):
+    def agregar_jugadores(self,*jugadores: tuple[Jugador]):
+        pass
+    def remover_jugadores(self,*jugadores: tuple[Jugador]):
         pass
     def mostrar_jugadores(self):
-        pass
-    def remover_jugadores(self):
         pass
     def total_goles(self):
         pass
