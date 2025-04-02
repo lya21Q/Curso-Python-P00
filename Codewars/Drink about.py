@@ -1,4 +1,9 @@
 """
+Nombre: Rosalinda Aquino Pérez
+Fecha:01/04/2025
+"""
+"""
+Instrucciones:
 Los niños beben ponche.
 Los adolescentes beben Coca-Cola.
 Los adultos jóvenes beben cerveza.
@@ -12,15 +17,15 @@ Joven menor de 21 años.
 Los adultos tienen 21 o más.
 
 Ejemplos: (Entrada --> Salida)
-
 13 --> "drink toddy"
 17 --> "drink coke"
 18 --> "drink beer"
 20 --> "drink beer"
 30 --> "drink whisky"
 """
-age= int(input("Ingrese tu edad: "))
-def people_with_age_drink(age):
+def people_with_age_drink(age:int)->str:
+#Parametros: age(int): Un numero que representa la edad.
+#Retorna : Una cadena que representa lo que beben correspondiendo a la edad.
     if age <= 13:
         return 'drink toddy'
     if age > 13 and age <= 17:
@@ -29,6 +34,9 @@ def people_with_age_drink(age):
         return 'drink beer'
     if age > 20:
         return 'drink whisky'
-print(f"{people_with_age_drink(age)}")
+
+if __name__ == "__main__":
+    age = int(input("Ingrese tu edad: "))
+    print(f"{people_with_age_drink(age)}")
 
 
