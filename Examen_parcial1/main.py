@@ -1,6 +1,5 @@
 from jugador_clase import Jugador
 from equipo import Equipo
-from torneos import Torneo
 
 def menu():
     opcion=None
