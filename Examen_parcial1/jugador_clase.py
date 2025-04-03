@@ -18,4 +18,3 @@ class Jugador:
 
     def __str__(self):
        return f"Jugador(Nombre del jugador:{self._nombre}, numero de jugador:{self._numero},cantidad de goles anotados {self._goles})"
-

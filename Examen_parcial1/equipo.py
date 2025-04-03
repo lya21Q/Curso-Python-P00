@@ -1,4 +1,4 @@
-from jugador import Jugador
+from jugador_clase import Jugador
 class Equipo:
     id=1
     def __init__(self,nombre:str,*jugadores:tuple[Jugador]):
