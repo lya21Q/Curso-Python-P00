@@ -22,7 +22,7 @@ class Equipo:
         self._id_equipo=Equipo._id
         self._nombre=nombre
         self._jugadores=list(jugadores)
-        Equipo._id+=1
+
 
     def nombre(self):
         return self._nombre
