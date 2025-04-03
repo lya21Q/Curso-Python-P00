@@ -5,24 +5,33 @@ class Jugador:
         self._nombre=nombre
         self._numero=numero
         self._goles=goles
+
+    @property
     def nombre(self):
         return self._nombre
-
-    def anotar_goles(self,no_goles: int):
-        no_goles=int(input("Ingresar la cantidad de goles:"))
+    @property
+    def numero(self):
+        return self._numero
+    @property
+    def goles(self):
         return self._goles
 
     def __str__(self):
        return f"Jugador(Nombre del jugador:{self._nombre}, numero de jugador:{self._numero},cantidad de goles anotados {self._goles})"
 
-_id = 0
+
 class Equipo:
+    id=1
     def __init__(self,nombre:str,*jugadores:tuple[Jugador]):
         """Constructor de la clase equipo, que representa un equipo"""
-        self._id_equipo=Equipo._id
+        self._id_equipo=Equipo.id
+        Equipo.id+=1
         self._nombre=nombre
         self._jugadores=list(jugadores)
-
+    @property
+    def id_equipo(self):
+        return self._id_equipo
+    @property
     def nombre(self):
         return self._nombre
 
@@ -44,9 +53,6 @@ class Equipo:
             print(jugador)
 
     def total_goles(self):
-        for jugador in self._jugadores:
-            sum(jugador._goles)
-        return sum
+        return sum(jugador.goles for jugador in self._jugadores)
     def __str__(self):
-        def __str__(self):
-            return f"Jugador(Nombre del jugador:{self._nombre}, numero de jugador:{self._numero},cantidad de goles anotados {self._goles})"
+        return f"Jugador(Id equipo:r:{self._id_equipo}, numbre del jugador:{self._nombre},cantidad de goles anotados {self.total_goles()})"

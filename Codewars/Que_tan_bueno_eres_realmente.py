@@ -1,7 +1,7 @@
 """
 Nombre:Rosalinda Aquino Pérez
 Fecha: 01/04/2025
-Hubo un examen en tu clase y lo aprobaste. ¡Felicidades!
+Hubo un Examen_parcial1 en tu clase y lo aprobaste. ¡Felicidades!
 Pero eres ambicioso. Quieres saber si eres mejor que el promedio de tu clase.
 Recibirás una matriz con las puntuaciones de tus compañeros. ¡Ahora calcula el promedio y compara tu puntuación!
 Vuelve truesi estás mejor, de lo contrario false...
