@@ -24,9 +24,3 @@ class Torneos:
         pass
     def __str__(self):
         return f"Jugador(torneo:{self._nombre},equipos:{self._equipos})"
-if __name__=="__main__":
-    equipo_1=Equipo("los tigres")
-    equipo2=Equipo("los halcones")
-    Torneos=Torneos("invencible", equipo_1,equipo2)
-    print(Torneos)
-    Torneos.mostrar_equipos()
