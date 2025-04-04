@@ -28,7 +28,7 @@ def menu():
         elif opcion == 1:
             crear_jugador(jugadores)
         elif opcion == 2:
-            crear_equipo(list_equipo,*jugadores)
+            crear_equipo(list_equipo)
         elif opcion==3:
             mostrar_lista_jugadores(jugadores)
         elif opcion==4:
@@ -36,7 +36,7 @@ def menu():
         elif opcion==5:
           agregar_jugadores(jugadores,list_equipo)
         elif opcion==6:
-            eliminar_jugadores()
+            eliminar_jugadores(jugadores)
         elif opcion==7:
             agregar_equipos_torneo(list_equipo)
         elif opcion==8:
@@ -44,9 +44,9 @@ def menu():
         elif opcion==9:
             anotar_goles_a_un_jugador()
         elif opcion==10:
-            total_de_goles()
+            total_de_goles(jugadores)
         elif opcion==11:
-            generarl_rol()
+            generarl_rol(list_equipo)
 
 
 def crear_jugador(jugadores):
@@ -59,12 +59,12 @@ def crear_jugador(jugadores):
     else:
         print("Datos inválidos, por favor verifica que el número y los goles sean positivos.")
 
-def crear_equipo(list_equipo,*equipos):
+def crear_equipo(list_equipo):
     while True:
-        nombre = input("Ingresa el nombre del equipo o '1' para terminar: ")
-        if nombre == "1":
+        nombre_del_equipo= input("Ingresa el nombre del equipo o '1' para terminar: ")
+        if nombre_del_equipo == "1":
             break
-        equipo = Equipo(nombre, *equipos)
+        equipo = Equipo(nombre_del_equipo,)
         list_equipo.append(equipo)
 
 def mostrar_lista_jugadores(jugadores):
@@ -75,24 +75,32 @@ def mostrar_lista_jugadores(jugadores):
     else:
         print("No hay jugadores registrados.")
 
-def mostrar_lista_equipos(equipos):
-    for equipo in equipos:
-        print(equipo)
+def mostrar_lista_equipos(lista_equipos):
+    for equipo in lista_equipos:
+        if lista_equipos=="":
+            print("No hay equipos para mostrar.")
+        else:
+            print(equipo)
 
-
-def agregar_jugadores(jugadores, list_equipo):
-    crear_jugador(jugadores)
+def agregar_jugadores(list_equipo,jugadores):
     nombre_jugador = input("Escribe el nombre del jugador: ")
-    jugador_seleccionado = " "
-    for jugador in jugadores:
-        if jugador.nombre == nombre_jugador:
-            nuevo = jugador
+    nombre_equipo = input("Escribe el nombre del equipo: ")
+    equipo_seleccionado=" "
+    for equipo in list_equipo:
+        if equipo.nombre == nombre_equipo:
+            equipo_seleccionado= equipo
             break
-    if jugador_seleccionado:
-        print(f"Jugador {nuevo.nombre}.")
-        return nuevo
-    else:
-        print(f"No se encontró un jugador con el nombre '{nombre_jugador}'.")
+    if equipo_seleccionado!= list_equipo:
+        print(f"No se encontro equipo.intenta de nuevo")
+        return
+    jugador_seleccionado=" "
+    for jugador in jugadores:
+        if jugador.nombre==nombre_jugador:
+            jugador_seleccionado=jugador
+            break
+    if jugador_seleccionado!=jugadores:
+        print("Nose encontro el jugador.")
+    equipo_seleccionado.agregar_jugador(jugador_seleccionado)
 
 def agregar_equipos_torneo(list_equipo,*jugadores):
         print("ingresa el nombre del equipo:")
@@ -101,7 +109,7 @@ def agregar_equipos_torneo(list_equipo,*jugadores):
                 print("No hay equipos disponibles.")
             else:
                 crear_equipo(list_equipo,*jugadores)
-def eliminar_jugadores(jugadores,nombre):
+def eliminar_jugadores(jugadores):
     nombre=input("Ingresa el nombre del integrante que deceas eliminar:")
     for jugador in jugadores:
         if jugador in jugadores:
@@ -121,13 +129,13 @@ def total_de_goles(jugadores):
             return 0
         return sum(jugador.goles for jugador in jugadores)
 
-def generarl_rol(equipos):
-    if len(equipos) < 2:
+def generarl_rol(list_equipo):
+    if len(list_equipo) < 2:
         print("No hay suficientes equipos.")
         return " "
     jornadas = []
-    for equipo1 in enumerate(equipos):
-        for equipo2 in enumerate(equipos):
+    for equipo1 in enumerate(list_equipo):
+        for equipo2 in enumerate(list_equipo):
             if equipo1 < equipo2:
                 jornadas.append((equipo1, equipo2))
     return jornadas

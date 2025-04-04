@@ -41,4 +41,5 @@ class Equipo:
         return sum(jugador.goles for jugador in self._jugadores)
 
     def __str__(self):
+        jugadores_str = "\n".join(f"- {jugador}" for jugador in self._jugadores)
         return f"Equipo(Id equipo:{self._id_equipo}, nombre:{self._nombre},jugadores{self.mostrar_jugadores()}cantidad de goles anotados {self.total_goles()})"
