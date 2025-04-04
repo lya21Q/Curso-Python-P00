@@ -5,8 +5,11 @@ class Torneo:
         self._equipos=list(equipos)
 
     def agregar_equipos(self,*equipos: tuple[Equipo])->None:
-        for equipo in list(equipos):
-            self._equipos.append(equipo)
+        for equipo in equipos:
+            if equipo not in self._equipos:
+                self._equipos.append(equipo)
+            else:
+                print(f"El equipo {equipo.nombre} ya está en el torneo.")
 
     def remover_equipos(self,*equipos: tuple[Equipo])->None:
         for equipo in equipos:

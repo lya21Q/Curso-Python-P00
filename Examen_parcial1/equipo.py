@@ -28,10 +28,17 @@ class Equipo:
                 print(f"El {jugador} no forma parte de {self._nombre}.")
 
     def mostrar_jugadores(self):
-        for jugador in self._jugadores:
-            print(jugador)
+        if not self._jugadores:
+            print(f"No hay jugadores en el equipo {self._nombre}.")
+        else:
+            print(f"Jugadores en el equipo {self._nombre}:")
+            for jugador in self._jugadores:
+                print(f"- {jugador}")
 
     def total_goles(self):
+        if not self._jugadores:
+            return 0
         return sum(jugador.goles for jugador in self._jugadores)
+
     def __str__(self):
-        return f"Jugador(Id equipo:r:{self._id_equipo}, numbre del jugador:{self._nombre},cantidad de goles anotados {self.total_goles()})"
+        return f"Equipo(Id equipo:{self._id_equipo}, nombre:{self._nombre},jugadores{self.mostrar_jugadores()}cantidad de goles anotados {self.total_goles()})"
