@@ -59,13 +59,14 @@ def crear_jugador(jugadores):
     else:
         print("Datos inválidos, por favor verifica que el número y los goles sean positivos.")
 
-def crear_equipo(list_equipo,*jugadores):
+def crear_equipo(list_equipo,*equipos):
     while True:
         nombre = input("Ingresa el nombre del equipo o '1' para terminar: ")
         if nombre == "1":
             break
-        equipo = Equipo(nombre, *jugadores)
+        equipo = Equipo(nombre, *equipos)
         list_equipo.append(equipo)
+
 def mostrar_lista_jugadores(jugadores):
     if jugadores:
         print("Lista de jugadores:")
@@ -74,13 +75,10 @@ def mostrar_lista_jugadores(jugadores):
     else:
         print("No hay jugadores registrados.")
 
-def mostrar_lista_equipos(list_equipo):
-    if list_equipo:
-        print("Lista de equipos:")
-        for equipo in list_equipo:
-            print(equipo)
-    else:
-        print("No hay equipos registrados.")
+def mostrar_lista_equipos(equipos):
+    for equipo in equipos:
+        print(equipo)
+
 
 def agregar_jugadores(jugadores, list_equipo):
     crear_jugador(jugadores)
@@ -103,8 +101,13 @@ def agregar_equipos_torneo(list_equipo,*jugadores):
                 print("No hay equipos disponibles.")
             else:
                 crear_equipo(list_equipo,*jugadores)
-def eliminar_jugadores():
-    pass
+def eliminar_jugadores(jugadores,nombre):
+    nombre=input("Ingresa el nombre del integrante que deceas eliminar:")
+    for jugador in jugadores:
+        if jugador in jugadores:
+            jugadores.remove(jugador)
+        else:
+            print(f"El {jugador} no forma parte de {nombre}.")
 def agregar_equipos_al_torneo():
     pass
 def eliminar_equipos_del_torneo():
