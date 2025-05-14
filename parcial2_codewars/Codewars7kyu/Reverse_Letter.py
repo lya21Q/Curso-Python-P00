@@ -14,9 +14,9 @@ def reverse_letter(st):
     letras = ""
 
     for letra in st:
-        if 'a' <= letra <= 'z' or 'A' <= letra <= 'Z':  # Filtrar letras
+        if 'a' <= letra <= 'z' or 'A' <= letra <= 'Z':  # Mientras sean solo letras mayusculas y minusculas.
             letras+=letra
-    return "".join(reversed(st))
+    return "".join(reversed(st))#Retorna revertida la cadena
 
 if __name__=="__main__":
     st="krishan"
