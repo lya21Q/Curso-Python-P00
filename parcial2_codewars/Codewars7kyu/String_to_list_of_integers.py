@@ -27,6 +27,7 @@ def string_to_int_list(s):
         numeros.append(int(num))
     return numeros
 
-s="-1,-2,3,-4,-5"
-print(string_to_int_list(s))
+if __name__=="__main__":
+    s="-1,-2,3,-4,-5"
+    print(string_to_int_list(s))
 

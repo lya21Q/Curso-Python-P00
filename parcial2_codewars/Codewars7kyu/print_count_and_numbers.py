@@ -13,22 +13,24 @@ De manera similar "211213"regresará "1221121113" (1 vez 2, 2 veces 1, 1 vez 2, 
 Retorna :""para cadenas vacías, nulas o no numéricas
 """
 def count_me(data):
-    contador = {}
+    contador = {} # Diccionario que almacenará la cantidad de apariciones de cada carácter
     resultado = ""
     contados = ""
+    # Recorremos la cadena y contamos las ocurrencias de cada carácter
     for i in data:
         if i in contador:
             contador[i] += 1
-        else:
+        else:#si la letra aparece por primera vez inializamos el contador e n e1.
             contador[i] = 1
     for i in data:
-        if i not in contados:
+        if i not in contados:#caracteres que no han sido agregados
             resultado += str(contador[i]) + i
             contados += i
 
     return resultado
 
-data = "112233"
-print(count_me(data))
+if __name__=="__main__":
+    data = "112233"
+    print(count_me(data))
 
 

@@ -18,5 +18,6 @@ def reverse_letter(st):
             letras+=letra
     return "".join(reversed(st))
 
-st="krishan"
-print(reverse_letter(st))
+if __name__=="__main__":
+    st="krishan"
+    print(reverse_letter(st))
