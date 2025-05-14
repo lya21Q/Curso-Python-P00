@@ -3,3 +3,7 @@ def even_or_odd(number):
         return "Even"
     else:
         return "Odd"
+
+if __name__=="__main__":
+    number=
+    print(even_or_odd(number))

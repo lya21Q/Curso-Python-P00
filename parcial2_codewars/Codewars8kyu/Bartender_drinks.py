@@ -15,5 +15,5 @@ def get_drink_by_profession(param):
         return "Cristal"
     else:
         return "Beer"
-
-print(get_drink_by_profession(param))
+if __name__=="__main__":
+    print(get_drink_by_profession(param))
