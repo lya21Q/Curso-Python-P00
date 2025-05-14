@@ -1,3 +1,11 @@
+"""
+Tome un array y elimine cada segundo elemento. Conserve siempre el primer elemento y comience a eliminar con el siguiente.
+
+Ejemplo:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...]-->["Keep", "Keep", "Keep", ...]
+
+¡Ninguna de las matrices estará vacía, por lo que no tienes que preocuparte por eso!
+"""
 def remove_every_other(my_list):
     nueva = []
     for indice, lista in enumerate(my_list):
