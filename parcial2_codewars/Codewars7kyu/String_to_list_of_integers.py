@@ -15,13 +15,13 @@ def string_to_int_list(s):
     numeros = []
     num = ''
     for i in s:
-        if i == '-' and not num:
+        if i == '-' and not num:#mientras no encuentre un negativo
             num += i
-        elif i >='0' or i >= '9':
+        elif i >='0' or i >= '9':#Verificar si el caracter es un numero
             num += i
-        else:
+        else:#si encontramos un caracter no numerico,almacenamos el numero construido.
             if num:
-                numeros.append(int(num))
+                numeros.append(int(num))#convertimos la cadena en int y lo añadimos a la lista.
                 num = ''
     if num:
         numeros.append(int(num))
