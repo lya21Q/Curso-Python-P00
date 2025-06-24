@@ -10,7 +10,7 @@ def solution(number):
         if i % 3 == 0 or i % 5 == 0:# Se verifica que el número al dividirlo entre 3 y 5 se obtenga un residuo de 0
             suma += i#se le suma el numero actual a la variable suma
     print(f"La suma de los multipos de {number}, es {suma}")
-    return suma
+    return suma #Se retorna la suma de los multplios encontrados.
 
 if __name__=="__main__":
     number = 10
