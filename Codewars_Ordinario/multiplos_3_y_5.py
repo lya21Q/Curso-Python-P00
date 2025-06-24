@@ -7,10 +7,10 @@ Además, si el número es negativo, devuelve 0.
 def solution(number):
     suma=0
     for i in range(number):
-        if i % 3 == 0 or i % 5 == 0:# Se verifica que el nú,mero al dividirlo entre 3 y 5 se obtenga un residuo de 0
-            suma += i#Se acumula en la variable suma y se le suman los anteriores.
+        if i % 3 == 0 or i % 5 == 0:# Se verifica que el número al dividirlo entre 3 y 5 se obtenga un residuo de 0
+            suma += i#se le suma el numero actual a la variable suma
     print(f"La suma de los multipos de {number}, es {suma}")
-    return suma#se le suma el numero actual a la variable suma
+    return suma
 
 if __name__=="__main__":
     number = 10
