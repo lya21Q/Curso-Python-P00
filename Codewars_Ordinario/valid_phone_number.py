@@ -7,7 +7,7 @@ Solo preocúpese por el siguiente formato:
 """
 """
 Función is.digit()
-Verifica si una cadena de texto esta compuesta de por números.
+Verifica si una cadena de texto esta compuesta de por dígitos/números.
 """
 def valid_phone_number(phone_number):
     if len(phone_number) != 14:# si la cadena no tiene un rango de 14 caracteres
